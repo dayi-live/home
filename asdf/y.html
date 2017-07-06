@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="height:100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>大医Live</title>
+    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/1.1.1/weui.min.css">
+    <link href="https://cdn.bootcss.com/video.js/6.0.1/alt/video-js-cdn.min.css" rel="stylesheet">
+</head>
+<body ontouchstart style="height:100%;">
+
+<div style="height:100%; width:100%; display:table;">
+<div style="display:table-row; width:100%;">
+  <video id="my-video" class="video-js" controls preload="metadata" width="100%"
+     poster="surger1.jpg" 
+     data-setup="{}"
+     fluid="true" 
+     webkit-playsinline="true"
+     x-webkit-airplay="true" 
+     playsinline="true" 
+     x5-video-player-type="h5" 
+     x5-video-orientation="h5" 
+     x5-video-player-fullscreen="true" >
+    	<source src="http://4734.liveplay.myqcloud.com/live/4734_ab692c95393711e791eae435c87f075e.m3u8" type='application/x-mpegURL'>
+        <source src="http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/gear3/prog_index.m3u8" type='application/x-mpegURL'>
+        <p class="vjs-no-js">
+      		To view this video please enable JavaScript, and consider upgrading to a web browser that
+      		<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    	</p>
+  </video>
+</div>
+
+
+<div style="display:table-row; width:100%;">
+<div style="margin: 10px 10px 10px 10px;">
+一场极为牛逼的手术</br>
+时间：2017.5.16 10:00~17:30
+</div>
+</div>
+
+<div style="display:table-row; width:100%; border-style:solid; border-size:1px; border-color: #005050; background-color: #d0d0d0">
+<br/>
+</div>
+
+<div class="page" style="display:table-row; width=100%; height:100%;">
+    <div class="page__bd" style="height: 100%;">
+        <div class="weui-tab">
+            <div class="weui-tab__panel">
+            <div> 简述直播的看点 </div>
+            <div style="display:none"> 医生简介 </div>
+            <div style="display:none"> 医院简介 </div>
+            <div style="display:none"> 病案简介 </div>
+            </div>
+            <div class="weui-tabbar">
+                <a href="javascript:;" class="weui-tabbar__item weui-bar__item_on">
+                    <span style="display: inline-block;position: relative;">
+                        <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                        <!-- <span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">8</span> -->
+                    </span>
+                    <p class="weui-tabbar__label">直播</p>
+                </a>
+                <a href="javascript:;" class="weui-tabbar__item">
+                    <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                    <p class="weui-tabbar__label">医生</p>
+                </a>
+                <a href="javascript:;" class="weui-tabbar__item">
+                    <span style="display: inline-block;position: relative;">
+                        <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                        <!-- <span class="weui-badge weui-badge_dot" style="position: absolute;top: 0;right: -6px;"></span> -->
+                    </span>
+                    <p class="weui-tabbar__label">医院</p>
+                </a>
+                <a href="javascript:;" class="weui-tabbar__item">
+                    <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                    <p class="weui-tabbar__label">病患</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+<script src="https://res.wx.qq.com/open/libs/weuijs/1.1.1/weui.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.weui-tabbar__item').on('click touchstart', function () {
+            $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+            $('.weui-tab__panel div').eq($(this).index()).show().siblings().hide();
+        });
+    });
+</script>
+<script src="https://cdn.bootcss.com/video.js/6.0.1/alt/video.novtt.min.js"></script>
+
+
+</body>
+</html>
+

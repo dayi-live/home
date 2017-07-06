@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="height:100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>大医Live视频测试</title>
+    <link  href="https://cdn.bootcss.com/video.js/6.0.1/alt/video-js-cdn.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/video.js/6.0.1/alt/video.novtt.min.js"></script>
+    <script src="https://cdn.bootcss.com/videojs-contrib-hls/5.5.3/videojs-contrib-hls.min.js"></script>
+    <style>
+        .bx-controls {
+            display: none;
+        }
+    </style>
+</head>
+<body ontouchstart style="height:100%; margin:0px" >
+
+    <div id='top' style="width:100%;">
+        <video id="myvideo" class="video-js" controls preload="metadata" width="100%"
+               poster="surgery.jpg"
+               data-setup="{}"
+               fluid="true"
+               webkit-playsinline="true"
+               x-webkit-airplay="true"
+               playsinline="true"
+               x5-video-player-type="h5"
+               x5-video-orientation="h5"
+               x5-video-player-full/screen="true">
+            <source src="http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type='application/x-mpegURL'>
+            <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+        </video>
+    </div>
+</body>
+</html>
+
+
